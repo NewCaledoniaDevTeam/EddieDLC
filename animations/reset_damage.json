@@ -1,0 +1,39 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.player.reset_damage": {
+      "animation_length": 0.5,
+      "anim_time_update" : "(query.anim_time + query.delta_time) * variable.damage",
+      "loop": true,
+      "particle_effects": {
+        "0.0": {
+          "effect": "hit_particle"//"locator": "custom_position" ... use this locator to change the offset of your particle. Defaults to center
+        }
+      },
+      "bones": {
+        "centerbone": {
+          "rotation": {
+            "0.0": [ "variable.damage = 0.0; return 0.0;", 0, 0 ]
+          }
+        }
+      }
+    },
+    "animation.player.reset_fire_damage": {//we need to set a variable for fire damage because it frequently desyncs from the standard 0.5 second timer due to damage timers differing in lava
+      "animation_length": 0.5,
+      "anim_time_update" : "(query.anim_time + query.delta_time) * variable.damage",
+      "loop": true,
+      "particle_effects": {
+        "0.0": {
+          "effect": "hit_particle"
+        }
+      },
+      "bones": {
+        "centerbone": {
+          "rotation": {
+            "0.0": [ "variable.damage = 0.0; variable.fire_damage = 0.0; return 0.0;", 0, 0 ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": "1.8.0",
+  "render_controllers": {
+    "controller.render.player.hit_particle": {
+      "geometry": "Geometry.hit_particle",
+      "materials": [ { "*": "Material.default" } ],
+      "is_hurt_color": {
+      	"a": "variable.damage = 1.0; return 0.0;"
+      }
+    },
+    "controller.render.player.hit_particle_fire": {
+      "geometry": "Geometry.hit_particle",
+      "materials": [ { "*": "Material.default" } ],
+      "is_hurt_color": {
+      	"a": "variable.fire_damage = 1.0; return 0.0;"
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.emitter": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "emit1": "variable.damage == 1.0 && query.is_on_fire == 0.0"
+            },
+            {
+              "emit2": "variable.fire_damage == 1.0"
+            }
+          ]
+        },
+        "emit1": {
+          "animations": [
+            "reset_damage"
+          ],
+          "transitions": [
+            {
+              "default": "query.any_animation_finished"
+            }
+          ]
+        },
+        "emit2": {
+          "animations": [
+            "reset_fire_damage"
+          ],
+          "transitions": [
+            {
+              "default": "query.any_animation_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
