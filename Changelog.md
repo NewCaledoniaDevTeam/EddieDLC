@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [BETA]
 
+## [0.0.5] - 2020-12-19
+### Added
+- OpenDyslexic Font (hopefully)
+
 ## [0.0.4] - 2020-12-04
 ### Added
 - Scary End Dragon

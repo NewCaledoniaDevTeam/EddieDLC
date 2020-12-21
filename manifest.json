@@ -4,7 +4,7 @@
         "description": "DLC Design by Eddie for New Caledonia Shader",
         "name": "Eddie DLC",
         "uuid": "a7ca4fb7-7da7-4242-b298-78024a71fcae",
-        "version": [0, 0, 4],
+        "version": [0, 0, 5],
         "min_engine_version": [ 1, 14, 0 ]
     },
     "modules": [
